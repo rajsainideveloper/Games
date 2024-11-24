@@ -23,13 +23,10 @@ function calculateData() {
     check_game_is_over = true;
     for( let i=0; i<gameArray.length; i++) {
         for( let j=0; j<=3; j++) {
-            // console.log(gameArray[i][j]);
             if ( gameArray[i][j] != [] && gameArray[i][j] == gameArray[i][j+1]) {
-                // gameArray[i][j]
                 let sum = gameArray[i][j]+gameArray[i][j+1];
                 gameArray[i][j+1] = sum;
                 gameArray[i][j] = [];
-                // console.log(gameArray[i][j]+gameArray[i][j+1]);
             }
             //check game is over or not
             if ( gameArray[i][j] == [] || gameArray[i][j] == '') {
@@ -57,23 +54,28 @@ function renderTheData() {
 document.addEventListener('keydown', function(e) {
     e.preventDefault(); // Prevent the default scrolling behavior
     if ( check_game_is_over ) {
-        console.log("game is Over Now......");
+        showWarning("Game is Over Now...");
+        // document.getElementsByClassName('over_warnging')[0].innerHTML = "Game is Over Now......";
+        // console.log();
         return;
     }
 
     let number = 2;
     if (e.keyCode === 37) {
-        console.log('Left arrow pressed');
+        // console.log('Left arrow pressed');
+        showWarning('Left arrow pressed');
         putNumber(number);
     } else if (e.keyCode === 39) {
-        console.log('Right arrow pressed');
+        // console.log('Right arrow pressed');
+        showWarning('Right arrow pressed');
         putNumber(number);
     } else if (e.keyCode === 38) {
-        console.log('Up arrow pressed');
+        // console.log('Up arrow pressed');
+        showWarning('Up arrow pressed');
         putNumber(number);
     } else if (e.keyCode === 40) {
-
-        console.log('Down arrow pressed');
+        // console.log('Down arrow pressed');
+        showWarning('Down arrow pressed');
         // console.log(2);
         putNumber(number);
     }
@@ -99,4 +101,8 @@ function putNumber( number ) {
             
         } 
     }
+}
+
+function showWarning(text) {
+    document.getElementsByClassName('over_warnging')[0].innerHTML = text;
 }

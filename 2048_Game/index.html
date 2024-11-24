@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <style>
+        body {
+            background-color: #FAF8EF;
+        }
         .main_container, h1{
             display: flex;
             justify-content: center;
-            
         }
 
         .column {
-            border:1px solid black;
             width: 70px;
             height: 55px;
             display: flex;
@@ -20,15 +21,18 @@
             font-size: xxx-large;
             padding-top: 20px;
             margin: 8px;
+            background-color: #FAF8EF;
         }
         .row {
             display: inline-block;
             background-color: #BBAC9F;
         }
+        .over_warnging {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <!-- Hello -->
     <h1> Play 2048 Game </h1>
      <div class="main_container">
         <div class="row">
@@ -55,7 +59,8 @@
             <div class="column 2_3"></div>
             <div class="column 3_3"></div>
         </div>
-     </div>
+    </div>
+    <h1 class="over_warnging"></h1>
 </body>
 </html>
 <script src="index.js"></script>
