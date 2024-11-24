@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <style>
+        .main_container, h1{
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .column {
+            border:1px solid black;
+            width: 70px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            font-size: xxx-large;
+            padding-top: 20px;
+            margin: 8px;
+        }
+        .row {
+            display: inline-block;
+            background-color: #BBAC9F;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Hello -->
+    <h1> Play 2048 Game </h1>
+     <div class="main_container">
+        <div class="row">
+            <div class="column 0_0">1</div>
+            <div class="column 1_0">2</div>
+            <div class="column 2_0">3</div>
+            <div class="column 3_0">4</div>
+        </div>
+        <div class="row">
+            <div class="column 0_1">5</div>
+            <div class="column 1_1">6</div>
+            <div class="column 2_1"></div>
+            <div class="column 3_1"></div>
+        </div>
+        <div class="row">
+            <div class="column 0_2"></div>
+            <div class="column 1_2"></div>
+            <div class="column 2_2"></div>
+            <div class="column 3_2"></div>
+        </div>
+        <div class="row">
+            <div class="column 0_3"></div>
+            <div class="column 1_3"></div>
+            <div class="column 2_3"></div>
+            <div class="column 3_3"></div>
+        </div>
+     </div>
 </body>
 </html>
+<script src="index.js"></script>
